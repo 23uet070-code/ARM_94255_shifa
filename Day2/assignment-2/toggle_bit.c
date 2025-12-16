@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdint.h>
+int main(void)
+{
+   uint8_t reg=0x2A;
+   int bit=5,i;
+
+   if(reg ^ (1<<5))
+   {
+      reg = reg ^ (1<<5);
+   }
+   else
+   {
+   reg=reg;
+   }
+
+   printf("hex = 0x%02x\n",reg);
+   printf("binary = ");
+   for(int i=7;i>=0;i--)
+   printf("%d",(reg>>i)&1);
+   return 0;
+
+}
