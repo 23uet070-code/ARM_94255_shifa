@@ -1,0 +1,10 @@
+13:13:39 **** Incremental Build of configuration Debug for project software_flag ****
+make -j12 all 
+arm-none-eabi-size  software_flag.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1296	      4	   1572	   2872	    b38	software_flag.elf
+Finished building: default.size.stdout
+ 
+
+13:13:41 Build Finished. 0 errors, 0 warnings. (took 1s.313ms)
+
