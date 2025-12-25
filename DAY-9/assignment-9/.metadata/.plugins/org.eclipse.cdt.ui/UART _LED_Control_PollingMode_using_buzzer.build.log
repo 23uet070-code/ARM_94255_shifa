@@ -1,0 +1,10 @@
+12:39:06 **** Incremental Build of configuration Debug for project UART _LED_Control_PollingMode_using_buzzer ****
+make -j12 all 
+arm-none-eabi-size  UART\ _LED_Control_PollingMode_using_buzzer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9524	     12	   1748	  11284	   2c14	UART _LED_Control_PollingMode_using_buzzer.elf
+Finished building: default.size.stdout
+ 
+
+12:39:07 Build Finished. 0 errors, 0 warnings. (took 1s.381ms)
+
