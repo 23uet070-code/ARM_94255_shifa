@@ -1,0 +1,75 @@
+21:10:53 **** Incremental Build of configuration Debug for project UART_based_led_control_polling_mode ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:51:1: warning: "/*" within comment [-Wcomment]
+   51 | /* USER CODE BEGIN PV */
+      |  
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:4: warning: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+  100 |    HAL_UART_Transmit(&huart2, ( uint8_t *)msg,strlen(msg),HAL_MAX_DELAY);
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:100:23: error: 'huart2' undeclared (first use in this function)
+  100 |    HAL_UART_Transmit(&huart2, ( uint8_t *)msg,strlen(msg),HAL_MAX_DELAY);
+      |                       ^~~~~~
+../Core/Src/main.c:100:23: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:112:16: warning: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+  112 |                HAL_UART_Receive(&huart2, &rx_byte, 1, HAL_MAX_DELAY);
+      |                ^~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_USART2_UART_Init':
+../Core/Src/main.c:207:21: error: invalid storage class for function 'MX_USART2_UART_Init'
+  207 |         static void MX_USART2_UART_Init(void)
+      |                     ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_USART2_UART_Init':
+../Core/Src/main.c:208:3: error: expected declaration specifiers before 'huart2'
+  208 |   huart2.Instance = USART2;
+      |   ^~~~~~
+../Core/Src/main.c:209:3: error: expected declaration specifiers before 'huart2'
+  209 |   huart2.Init.BaudRate = 9600;
+      |   ^~~~~~
+../Core/Src/main.c:210:3: error: expected declaration specifiers before 'huart2'
+  210 |   huart2.Init.WordLength = UART_WORDLENGTH_8B;
+      |   ^~~~~~
+../Core/Src/main.c:211:3: error: expected declaration specifiers before 'huart2'
+  211 |   huart2.Init.StopBits = UART_STOPBITS_1;
+      |   ^~~~~~
+../Core/Src/main.c:212:3: error: expected declaration specifiers before 'huart2'
+  212 |   huart2.Init.Parity = UART_PARITY_NONE;
+      |   ^~~~~~
+../Core/Src/main.c:213:3: error: expected declaration specifiers before 'huart2'
+  213 |   huart2.Init.Mode = UART_MODE_TX_RX;
+      |   ^~~~~~
+../Core/Src/main.c:214:3: error: expected declaration specifiers before 'huart2'
+  214 |   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |   ^~~~~~
+../Core/Src/main.c:215:3: error: expected declaration specifiers before 'huart2'
+  215 |   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+      |   ^~~~~~
+../Core/Src/main.c:216:3: error: expected declaration specifiers before 'if'
+  216 |   if (HAL_UART_Init(&huart2) != HAL_OK)
+      |   ^~
+../Core/Src/main.c:224:1: error: expected declaration specifiers before '}' token
+  224 | }
+      | ^
+../Core/Src/main.c:232:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  232 | {
+      | ^
+../Core/Src/main.c:254:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  254 | {
+      | ^
+../Core/Src/main.c:280: error: expected '{' at end of input
+../Core/Src/main.c: In function 'MX_USART2_UART_Init':
+../Core/Src/main.c:262:1: error: expected declaration or statement at end of input
+  262 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
+   57 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:207:21: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  207 |         static void MX_USART2_UART_Init(void)
+      |                     ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+21:10:54 Build Failed. 17 errors, 5 warnings. (took 1s.334ms)
+
