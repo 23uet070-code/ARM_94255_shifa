@@ -1,0 +1,7 @@
+11:56:17 **** Incremental Build of configuration Debug for project Numeric_Counter_Display ****
+make -j12 all 
+arm-none-eabi-size  Numeric_Counter_Display.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9776	     12	   1660	  11448	   2cb8	Numeric_Counter_Display.elf
+Finished building: default.size.stdout
+ 

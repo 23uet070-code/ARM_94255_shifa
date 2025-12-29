@@ -1,0 +1,10 @@
+10:31:57 **** Incremental Build of configuration Debug for project LCD_Scrolling_Operation ****
+make -j12 all 
+arm-none-eabi-size  LCD_Scrolling_Operation.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9788	     12	   1660	  11460	   2cc4	LCD_Scrolling_Operation.elf
+Finished building: default.size.stdout
+ 
+
+10:31:58 Build Finished. 0 errors, 0 warnings. (took 1s.816ms)
+
